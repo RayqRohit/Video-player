@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Dancing+Script:wght@400;600&family=Kalam:wght@700&family=Kanit&family=Kaushan+Script&family=Merriweather&family=Montserrat:wght@400;500&family=Poor+Story&family=Poppins:wght@400;700&family=Roboto&family=Sacramento&family=Sigmar&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #eee;
+   
+}
+
+.heading{
+    color: #444;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+.container{
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+
+    padding: 5px 5%;
+
+}
+
+.container .main-video{
+    background: #fff;
+    border-radius: 11px;
+    padding: 10px;
+    max-height: 590px;
+}
+
+.container .main-video video{
+    width: 100%;
+    border-radius: 9px;
+}
+
+.container .main-video .main-list-title{
+    color: #444;
+    padding-block: 13px;
+    font-size: 1.5rem;
+}
+
+.container .video-list{
+    background: #fff;
+    border-radius: 5px;
+   max-height: 590px;
+   overflow-y: scroll;
+}
+
+.container .video-list .vid video{
+    width: 100px;
+    border-radius: 5px;
+
+}
+
+.container .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+
+.container .video-list::-webkit-scrollbar-track{
+    background: #ccc;
+    border-radius: 50px;
+}
+
+.container .video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+}
+
+.container .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f7f7f7;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.container .video-list .vid:hover{
+    background: #eee;
+}
+
+.container .video-list .vid.active{
+    background: skyblue;
+    
+}
+
+.container .video-list .vid .title{
+    color: #333;
+    font-size: 17px;
+}
+
+@media (max-width:991px){
+    .container{
+
+        
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        grid-template-columns:  1fr;
+        /* padding: 10px; */
+    
+    }
+}
